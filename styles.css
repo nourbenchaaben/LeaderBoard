@@ -1,0 +1,409 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    background: #121212; /* Dark background for a gaming aesthetic */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Russo One', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    background: #1e1e1e8a;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    
+}
+
+.navbar h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 3rem; /* Larger title for emphasis */
+    letter-spacing: 3px; /* Modern look */
+    text-transform: uppercase; /* Stylish uppercase */
+    text-shadow: 2px 2px 6px rgba(200, 200, 200, 0.3); /* Soft shadow */
+  }
+  
+  /* Hover Effect */
+  .navbar h1:hover {
+    color: #FFD700;
+    text-shadow: 3px 3px 8px rgba(195, 194, 194, 0.5); /* Enhanced glow */
+    transition: all 0.3s ease-in-out;
+  }
+
+/* Leaderboard Container */
+.leaderboard-container {
+    width: 100%;
+    max-width: 1500px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Top 3 Profiles - Centered and Larger Cards */
+.top-three {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* More space between profiles */
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #1f1f1f;
+    padding: 50px;
+    border-radius: 20px;
+    width: 220px; 
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, width 0.3s ease; 
+}
+
+/* Center profile is larger */
+.profile.first {
+    width: 260px; 
+
+    padding:60px;
+    background: linear-gradient(50deg,  #FFD700,#fbf6dc, #FFC300);
+
+    background-size: 300%;
+    transition: background-position 0.5s ease, color 0.5s ease, box-shadow 0.3s ease;}
+.profile.second{
+    background: linear-gradient(50deg, #e3e2e2cc,#fbf6dc, #797878); 
+    transition: background-position 0.5s ease, color 0.5s ease, box-shadow 0.3s ease;
+    background-size: 300%;
+    width: 250px; 
+    padding: 40px;
+    
+
+}
+.profile.third{
+    background: linear-gradient(50deg, #c48a51, #fbf6dc, #CD7F32); 
+    background-size: 300%;
+    transition: background-position 0.5s ease, color 0.5s ease, box-shadow 0.3s ease;
+    width: 250px; 
+    padding: 40px;
+}
+
+.profile:hover {
+    transform: translateY(-10px);
+}
+
+/* Hover Effects for Top Profiles */
+.profile.first:hover {
+    box-shadow: 0 15px 50px #FFD700;
+    background-position: 100%;
+
+}
+
+.profile.second:hover {
+    box-shadow: 0 15px 40px #797878;
+    background-position: 100%;
+    
+}
+
+.profile.third:hover {
+    box-shadow: 0 15px 30px #CD7F32;
+    background-position: 100%;
+
+}
+
+/* Profile Image Hover */
+.profile-image img {
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    border: 4px solid #333;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.15); 
+}
+
+/* Profile Badge */
+.profile .badge {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+/* Profile Name and Score */
+.profile .name {
+    font-size: 1.6rem;
+    margin-top: 20px;
+    font-weight: 900;
+    color: #151414;
+    text-transform: uppercase; /* Stylish uppercase */
+    
+}
+
+.profile .score {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    color: #000000;
+    font-weight: 700;
+}
+
+.details p {
+    font-size: 20px;
+    color: #555;
+    margin: 4px 0;
+  }
+  
+  /* Highlighted Values */
+  .details span {
+    color: #333;
+  }
+
+/* Table Section Styling */
+.table-section {
+    background: #1e1e1e;
+    padding: 40px;
+    width: 100%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    margin-top: 40px;
+}
+
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove the space between cells */
+    text-align: center;
+    font-size: 1.2rem; /* Larger font size for better readability */
+}
+
+/* Table Header Styling */
+thead {
+    background: #333; /* Darker shade for header */
+    color: #fff;
+}
+
+thead th {
+    padding: 20px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #383838; /* Slightly lighter for header cells */
+    transition: background-color 0.3s ease; /* Smooth background color change */
+    color: #fcb713;
+
+}
+
+/* Hover effect on table header */
+thead th:hover {
+    background-color: #4b4b4b; /* Slightly lighter shade on hover */
+}
+
+/* Table Row Styling */
+tbody tr {
+    background: #282828;
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth background and row transform */
+}
+
+tbody tr:nth-child(odd) {
+    background: #333; /* Alternate row color */
+}
+
+/* Row hover effect with gradient color transition */
+tbody tr:hover {
+    background: linear-gradient(45deg, #fcb713, #dc3e00); /* Gradient from purple to red */
+    transform: translateY(-5px); /* Slight lift effect */
+    
+}
+
+/* Table Data Cells */
+tbody td {
+    padding: 20px 25px;
+    font-size: 1.2rem;
+    color: #ddd;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color and transform transition */
+}
+
+/* Rank numbers color change */
+tbody td:nth-child(1) {
+    font-weight: bold;
+    color: #fcb713; /* Gold color for the first column (rank) */
+}
+
+
+tbody td:nth-child(2) {
+    color: #c0c0c0; /* Silver color for the second column (rank) */
+}
+
+tbody td:nth-child(7) {
+    color: #fcb713;
+    font-weight: bold; /* Bronze color for the third column (rank) */
+}
+
+
+/* Hover effect on table cells */
+tbody tr:hover td {
+    color: #fff; /* Change text color to white on hover */
+    transform: scale(1.05); /* Slightly scale up text */
+}
+
+/* Add an icon to the header for visual appeal */
+thead th:first-child::after {
+    content: "⬆️"; /* Arrow icon for the first column */
+    margin-left: 10px;
+    font-size: 1.4rem;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect on icon */
+thead th:first-child:hover::after {
+    transform: rotate(180deg); /* Rotate the icon on hover */
+}
+
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .top-three {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .profile {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    table {
+        font-size: 1.1rem;
+    }
+
+    tbody td {
+        padding: 15px 20px;
+    }
+}
+
+
+.rating {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    
+  }
+  
+  .star {
+    font-size: 1.5rem;
+    color: #ddd;
+    transition: color 0.3s;
+  }
+  
+  .star.selected, 
+  .star:hover, 
+  .star:hover ~ .star {
+    color: #f5c518;
+  }
+  
+
+  .table-section a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .table-section a:hover {
+    text-decoration: underline;
+  }
+  
+  .rating {
+    display: flex;
+    direction: rtl;
+    gap: 5px;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .star {
+    font-size: 1.5rem;
+    color: #ddd;
+    transition: color 0.3s;
+  }
+  
+  .star.selected {
+    color: #f5c518;
+  }
+  
+ /* Responsive Design */
+@media (max-width: 480px) {
+    /* Navbar */
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar h1 {
+        font-size: 1.3rem;
+    }
+
+    /* Leaderboard Container */
+    .leaderboard-container {
+        max-width: 100%;
+        margin-top: 10px;
+    }
+
+    /* Top 3 Profiles */
+    .top-three {
+        flex-direction: column;
+        gap: 15px; /* Adjusted gap */
+    }
+
+    /* Profile Cards */
+    .profile {
+        width: 95%; /* More compact profiles */
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+
+    /* Table */
+    table {
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    tbody td {
+        padding: 10px 15px; /* Reduced padding */
+    }
+
+    .profile-image img {
+        width: 80px; /* Further reduced size */
+        height: 80px; /* Further reduced size */
+    }
+
+    .profile .name {
+        font-size: 1.1rem; /* Smaller name font */
+    }
+
+    .profile .score {
+        font-size: 1.8rem; /* Smaller score font */
+    }
+}
