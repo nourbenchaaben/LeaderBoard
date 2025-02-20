@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 
-
   <script defer src="script.js"></script>
 </head>
 <body>
@@ -20,59 +19,61 @@
   <!-- Leaderboard Container -->
   <div class="leaderboard-container">
     <!-- Top 3 Profiles -->
-     <!-- Top 3 Profiles -->
-  <div class="top-three">
+    <div class="top-three">
     <!-- First Place Profile -->
-    
+    <div class="profile first" data-rank="1">
+      <div class="profile-image">
+        <img src="https://via.placeholder.com/100" alt="First Place">
+      </div>
+      <div class="badge" style="color: #b8d8e7;">
+        <i class="fas fa-medal"></i>
+      </div>
+      <div class="name">First Place</div>
+      <div class="score">
+        <span class="total-score"></span>
+      </div>
+      <div class="reward">
+        <div class="diamond-card">Diamond : 4000 points</div>
+        <div class="reward">Reward: SURPRISE!</div>
+      </div>
+    </div>
 
     <!-- Second Place Profile -->
     <div class="profile second" data-rank="2">
       <div class="profile-image">
         <img src="https://via.placeholder.com/100" alt="Second Place">
       </div>
-      <div class="badge" style="color: #C0C0C0;"><i class="fas fa-medal"></i></div>
+      <div class="badge" style="color: #b7bbbd;">
+        <i class="fas fa-medal"></i>
+      </div>
       <div class="name">Second Place</div>
-      <div class="score"> <span class="total-score"></span></div>
-      <div class="details">
-        <p class="quiz-points">Quiz Points: <span class="quiz-points-value"></span></p>
-        <p class="task-points">Task Points: <span class="task-points-value"></span></p>
-        <p class="engagement-points">Engagement Points: <span class="engagement-points-value"></span></p>
-        <p class="session-points">Session Points: <span class="session-points-value"></span></p>
+      <div class="score">
+        <span class="total-score"></span>
+      </div>
+      <div class="reward">
+        <div class="platinum-card">Platinum : 3000 points</div>
+        <div class="reward">Reward: IMC Mug</div>
       </div>
     </div>
-
-    <div class="profile first" data-rank="1">
-        <div class="profile-image">
-          <img src="https://via.placeholder.com/100" alt="First Place">
-        </div>
-        <div class="badge" style="color: #FFD700;"><i class="fas fa-medal"></i></div>
-        <div class="name">First Place</div>
-        <div class="score"><span class="total-score"></span></div>
-        <div class="details">
-          <p class="quiz-points">Quiz Points: <span class="quiz-points-value"></span></p>
-          <p class="task-points">Task Points: <span class="task-points-value"></span></p>
-          <p class="engagement-points">Engagement Points: <span class="engagement-points-value"></span></p>
-          <p class="session-points">Session Points: <span class="session-points-value"></span></p>
-        </div>
-      </div>
 
     <!-- Third Place Profile -->
     <div class="profile third" data-rank="3">
       <div class="profile-image">
         <img src="https://via.placeholder.com/100" alt="Third Place">
       </div>
-      <div class="badge" style="color: #cd7f32;"><i class="fas fa-medal"></i></div>
+      <div class="badge" style="color: #ffd700;">
+        <i class="fas fa-medal"></i>
+      </div>
       <div class="name">Third Place</div>
-      <div class="score"><span class="total-score"></span></div>
-      <div class="details">
-        <p class="quiz-points">Quiz Points: <span class="quiz-points-value"></span></p>
-        <p class="task-points">Task Points: <span class="task-points-value"></span></p>
-        <p class="engagement-points">Engagement Points: <span class="engagement-points-value"></span></p>
-        <p class="session-points">Session Points: <span class="session-points-value"></span></p>
+      <div class="score">
+        <span class="total-score"></span>
+      </div>
+      <div class="reward">
+        <div class="gold-card">Gold : 2000 points</div>
+        <div class="reward">Reward: IMC Bracelet</div>
       </div>
     </div>
   </div>
-
 
     <!-- Leaderboard Table -->
     <div class="table-section">
@@ -80,15 +81,8 @@
         <thead>
           <tr>
             <th>Rank</th>
-            <th>Name</th>
-            <th>Quiz Points</th>
-            <th>Task Points</th>
-            <th>Engagement Points</th>
-            <th>Session Points</th>
-            <th>Total</th>
-            <th>Task Link</th>
-            <th>Rate</th>
-
+            <th>Member Name</th>
+            <th>Total Points</th>
           </tr>
         </thead>
         <tbody id="leaderboard-data">
@@ -103,35 +97,49 @@
         <thead>
           <tr>
             <th>Condition</th>
-            <th>Criteria</th>
             <th>Points</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Training Session by a member</td>
-            <td>Session</td>
-            <td>20 points</td>
+            <td class="border p-2">1-Participate in OC Team and be an active member in the event</td>
+            <td class="border p-2">30 points</td>
           </tr>
           <tr>
-            <td>Best quiz score</td>
-            <td>Quiz Points</td>
-            <td>10 points</td>
+            <td class="border p-2">2-Best task output</td>
+            <td class="border p-2">20 points</td>
           </tr>
           <tr>
-            <td>Best task</td>
-            <td>Task Points</td>
-            <td>15 points</td>
+            <td class="border p-2">3-Complete an assigned task or project</td>
+            <td class="border p-2">20 points</td>
           </tr>
           <tr>
-            <td>Most actively engaged</td>
-            <td>Engagement</td>
-            <td>5 points</td>
+            <td class="border p-2">4-Attend a club event</td>
+            <td class="border p-2">15 points</td>
+          </tr>
+          <tr>
+            <td class="border p-2">5-Assist a teammate with a task or problem</td>
+            <td class="border p-2">15 points</td>
+          </tr>
+          <tr>
+            <td class="border p-2">6-Attend a club meeting</td>
+            <td class="border p-2">10 points</td>
+          </tr>
+          <tr>
+            <td class="border p-2">7-Share a club post</td>
+            <td class="border p-2">10 points</td>
+          </tr>
+          <tr>
+            <td class="border p-2">8-Actively participate in discussions/activities</td>
+            <td class="border p-2">5 points</td>
+          </tr>
+          <tr>
+            <td class="border p-2">9-Like and Comment on a club post</td>
+            <td class="border p-2">2 points</td>
           </tr>
         </tbody>
       </table>
     </div>
-  
   </div>
 </body>
 </html>
