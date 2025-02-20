@@ -75,7 +75,7 @@ body {
     width: 260px; 
 
     padding:60px;
-    background: linear-gradient(50deg,  #FFD700,#fbf6dc, #FFC300);
+    background: linear-gradient(50deg,  #9ac5db,#f1f7fb, #b8d8e7);
 
     background-size: 300%;
     transition: background-position 0.5s ease, color 0.5s ease, box-shadow 0.3s ease;}
@@ -89,7 +89,8 @@ body {
 
 }
 .profile.third{
-    background: linear-gradient(50deg, #c48a51, #fbf6dc, #CD7F32); 
+    background: linear-gradient(50deg, #ffd700, #fffbe5, 
+    #ffdb19); 
     background-size: 300%;
     transition: background-position 0.5s ease, color 0.5s ease, box-shadow 0.3s ease;
     width: 250px; 
@@ -102,7 +103,7 @@ body {
 
 /* Hover Effects for Top Profiles */
 .profile.first:hover {
-    box-shadow: 0 15px 50px #FFD700;
+    box-shadow: 0 15px 50px #b8d8e7;
     background-position: 100%;
 
 }
@@ -114,7 +115,7 @@ body {
 }
 
 .profile.third:hover {
-    box-shadow: 0 15px 30px #CD7F32;
+    box-shadow: 0 15px 30px #ffd700;
     background-position: 100%;
 
 }
@@ -187,7 +188,12 @@ body {
     margin-top: 40px;
 }
 
-
+.reward {
+    font-size: 17px;
+    color: #313131;
+    margin-top: 10px;
+    font-weight: bold;
+  }
 /* Table Styling */
 table {
     width: 100%;
@@ -280,7 +286,23 @@ thead th:first-child:hover::after {
 }
 
 
-
+/* Table Header Styling */
+.points-table thead th {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  /* Table Body Styling */
+  .points-table tbody td {
+    font-weight: 200; /* Medium font weight for clarity */
+    text-align: left;
+  }
+  
+  /* Emphasize Condition Column */
+  .points-table tbody td:first-child {
+    font-weight: 300; /* Slightly bolder than points */
+  }
+  
 
 
 
@@ -307,25 +329,6 @@ thead th:first-child:hover::after {
 }
 
 
-.rating {
-    display: flex;
-    gap: 5px;
-    cursor: pointer;
-    
-  }
-  
-  .star {
-    font-size: 1.5rem;
-    color: #ddd;
-    transition: color 0.3s;
-  }
-  
-  .star.selected, 
-  .star:hover, 
-  .star:hover ~ .star {
-    color: #f5c518;
-  }
-  
 
   .table-section a {
     color: #3498db;
@@ -337,23 +340,7 @@ thead th:first-child:hover::after {
     text-decoration: underline;
   }
   
-  .rating {
-    display: flex;
-    direction: rtl;
-    gap: 5px;
-    justify-content: center;
-    cursor: pointer;
-  }
-  
-  .star {
-    font-size: 1.5rem;
-    color: #ddd;
-    transition: color 0.3s;
-  }
-  
-  .star.selected {
-    color: #f5c518;
-  }
+
   
  /* Responsive Design */
 @media (max-width: 480px) {
@@ -407,3 +394,4 @@ thead th:first-child:hover::after {
         font-size: 1.8rem; /* Smaller score font */
     }
 }
+
